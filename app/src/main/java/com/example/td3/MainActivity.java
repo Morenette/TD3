@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -68,10 +69,13 @@ public class MainActivity extends AppCompatActivity {
 
             PokeApi pokeApi = retrofit.create(PokeApi.class);
 
+        Log.d("TAG","Before callback");
             Call<RestPokemonResponse> call = pokeApi.getPokemonResponse();
             call.enqueue(new Callback<RestPokemonResponse>() {
                 @Override
                 public void onResponse(Call<RestPokemonResponse> call, Response<RestPokemonResponse> response) {
+                    Log.d("TAG","Inside callback");
+
                     if (response.isSuccessful() && response.body() != null){
                         List<Pokemon> pokemonList = response.body().getResults();
                         Toast.makeText(getApplicationContext(), "API Success", Toast.LENGTH_SHORT).show();
@@ -85,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                     showError();
                 }
             });
+        Log.d("TAG","After callback");
+
     }
 
     private void showError() {
