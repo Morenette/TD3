@@ -17,9 +17,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     // you provide access to all the views for a data item in a view holder
     public class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView txtHeader;
-        public TextView txtFooter;
-        public View layout;
+        TextView txtHeader;
+        TextView txtFooter;
+        View layout;
 
         public ViewHolder(View v) {
             super(v);
