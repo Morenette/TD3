@@ -1,0 +1,17 @@
+[
+  {
+    "nom": "balai bambou",
+    "url": "https://www.lafoirfouille.fr/medias/sys_master/images/images/h40/h37/9024224559134/10000206827-0-515Wx515H.jpg"
+    "prix": 8
+  }
+  {
+    "nom": "balai confort",
+    "url": "https://elephant-maison.com/wp-content/uploads/2017/08/balai-confort-france-elephant-496447-vue2-768x768.jpg",
+    "prix": 15
+  }
+  {
+    "nom": "balai sepière",
+    "url": "https://www.gifi.fr/media/catalog/product/cache/1/image/1000x/9df78eab33525d08d6e5fb8d27136e95/3/6/361282.jpg",
+    "prix": 8
+  }
+]
